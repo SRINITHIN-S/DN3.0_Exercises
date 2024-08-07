@@ -1,0 +1,23 @@
+// MVCPatternTest.java
+public class MVCPatternTest {
+    public static void main(String[] args) {
+        // Create a Student model
+        Student student = new Student("001", "Alice", "A");
+
+        // Create a Student view
+        StudentView view = new StudentView();
+
+        // Create a Student controller
+        StudentController controller = new StudentController(student, view);
+
+        // Display initial details
+        controller.updateView();
+
+        // Update student details
+        controller.setStudentName("Bob");
+        controller.setStudentGrade("B");
+
+        // Display updated details
+        controller.updateView();
+    }
+}

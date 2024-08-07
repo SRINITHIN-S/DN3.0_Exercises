@@ -1,0 +1,16 @@
+// AdapterPatternTest.java
+public class AdapterPatternTest {
+    public static void main(String[] args) {
+        // Create PayPal and Stripe gateway instances
+        PayPalGateway payPalGateway = new PayPalGateway();
+        StripeGateway stripeGateway = new StripeGateway();
+
+        // Create adapters for the gateways
+        PaymentProcessor payPalProcessor = new PayPalAdapter(payPalGateway);
+        PaymentProcessor stripeProcessor = new StripeAdapter(stripeGateway);
+
+        // Process payments using the adapters
+        payPalProcessor.processPayment(150.00);
+        stripeProcessor.processPayment(250.00);
+    }
+}

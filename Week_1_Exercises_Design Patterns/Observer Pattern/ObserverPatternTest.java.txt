@@ -1,0 +1,23 @@
+// ObserverPatternTest.java
+public class ObserverPatternTest {
+    public static void main(String[] args) {
+        // Create a stock market instance for a specific stock
+        StockMarket stockMarket = new StockMarket("AAPL");
+
+        // Create observer instances
+        Observer mobileApp = new MobileApp();
+        Observer webApp = new WebApp();
+
+        // Register observers
+        stockMarket.registerObserver(mobileApp);
+        stockMarket.registerObserver(webApp);
+
+        // Change stock price and notify observers
+        stockMarket.setStockPrice(150.00);
+        stockMarket.setStockPrice(155.50);
+        
+        // Deregister one observer and change stock price again
+        stockMarket.deregisterObserver(mobileApp);
+        stockMarket.setStockPrice(160.75);
+    }
+}

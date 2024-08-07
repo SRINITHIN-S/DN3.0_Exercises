@@ -1,0 +1,19 @@
+// DependencyInjectionTest.java
+public class DependencyInjectionTest {
+    public static void main(String[] args) {
+        // Create a repository
+        CustomerRepository customerRepository = new CustomerRepositoryImpl();
+
+        // Inject repository into service
+        CustomerService customerService = new CustomerService(customerRepository);
+
+        // Find a customer
+        Customer customer = customerService.getCustomerById("001");
+        if (customer != null) {
+            System.out.println("Customer ID: " + customer.getId());
+            System.out.println("Customer Name: " + customer.getName());
+        } else {
+            System.out.println("Customer not found.");
+        }
+    }
+}

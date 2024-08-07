@@ -1,0 +1,14 @@
+// WordDocument.java
+public interface WordDocument extends Document {
+    void edit();
+}
+
+// PdfDocument.java
+public interface PdfDocument extends Document {
+    void read();
+}
+
+// ExcelDocument.java
+public interface ExcelDocument extends Document {
+    void calculate();
+}

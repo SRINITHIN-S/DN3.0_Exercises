@@ -1,0 +1,55 @@
+// Computer.java
+public class Computer {
+    private final String CPU;
+    private final String RAM;
+    private final String Storage;
+    private final boolean hasGraphicsCard;
+    private final boolean hasWiFi;
+
+    // Private constructor to be used by the Builder class
+    private Computer(Builder builder) {
+        this.CPU = builder.CPU;
+        this.RAM = builder.RAM;
+        this.Storage = builder.Storage;
+        this.hasGraphicsCard = builder.hasGraphicsCard;
+        this.hasWiFi = builder.hasWiFi;
+    }
+
+    @Override
+    public String toString() {
+        return "Computer [CPU=" + CPU + ", RAM=" + RAM + ", Storage=" + Storage 
+                + ", hasGraphicsCard=" + hasGraphicsCard + ", hasWiFi=" + hasWiFi + "]";
+    }
+
+    // Static nested Builder class
+    public static class Builder {
+        private final String CPU;
+        private final String RAM;
+        private final String Storage;
+        private boolean hasGraphicsCard = false;
+        private boolean hasWiFi = false;
+
+        // Constructor for required parameters
+        public Builder(String CPU, String RAM, String Storage) {
+            this.CPU = CPU;
+            this.RAM = RAM;
+            this.Storage = Storage;
+        }
+
+        // Methods to set optional attributes
+        public Builder setGraphicsCard(boolean hasGraphicsCard) {
+            this.hasGraphicsCard = hasGraphicsCard;
+            return this;
+        }
+
+        public Builder setWiFi(boolean hasWiFi) {
+            this.hasWiFi = hasWiFi;
+            return this;
+        }
+
+        // Build method to create Computer instance
+        public Computer build() {
+            return new Computer(this);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// FactoryMethodTest.java
+public class FactoryMethodTest {
+    public static void main(String[] args) {
+        // Create Word Document using its factory
+        DocumentFactory wordFactory = new WordDocumentFactory();
+        WordDocument wordDoc = (WordDocument) wordFactory.createDocument();
+        wordDoc.open();
+        wordDoc.edit();
+        wordDoc.close();
+
+        // Create PDF Document using its factory
+        DocumentFactory pdfFactory = new PdfDocumentFactory();
+        PdfDocument pdfDoc = (PdfDocument) pdfFactory.createDocument();
+        pdfDoc.open();
+        pdfDoc.read();
+        pdfDoc.close();
+
+        // Create Excel Document using its factory
+        DocumentFactory excelFactory = new ExcelDocumentFactory();
+        ExcelDocument excelDoc = (ExcelDocument) excelFactory.createDocument();
+        excelDoc.open();
+        excelDoc.calculate();
+        excelDoc.close();
+    }
+}

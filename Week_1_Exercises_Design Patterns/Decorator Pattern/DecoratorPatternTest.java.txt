@@ -1,0 +1,16 @@
+// DecoratorPatternTest.java
+public class DecoratorPatternTest {
+    public static void main(String[] args) {
+        // Create a basic EmailNotifier
+        Notifier emailNotifier = new EmailNotifier();
+        emailNotifier.send("Hello, this is an email.");
+
+        // Add SMS notification functionality
+        Notifier smsNotifier = new SMSNotifierDecorator(emailNotifier);
+        smsNotifier.send("Hello, this is an email and SMS.");
+
+        // Add Slack notification functionality
+        Notifier slackNotifier = new SlackNotifierDecorator(smsNotifier);
+        slackNotifier.send("Hello, this is an email, SMS, and Slack message.");
+    }
+}

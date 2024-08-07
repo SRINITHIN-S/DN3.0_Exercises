@@ -1,0 +1,17 @@
+// ConcreteExcelDocument.java
+public class ConcreteExcelDocument implements ExcelDocument {
+    @Override
+    public void open() {
+        System.out.println("Opening Excel Document.");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("Closing Excel Document.");
+    }
+
+    @Override
+    public void calculate() {
+        System.out.println("Calculating Excel Document.");
+    }
+}

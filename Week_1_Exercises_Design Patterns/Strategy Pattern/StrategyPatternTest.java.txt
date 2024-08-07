@@ -1,0 +1,16 @@
+// StrategyPatternTest.java
+public class StrategyPatternTest {
+    public static void main(String[] args) {
+        // Creating payment strategies
+        PaymentStrategy creditCardPayment = new CreditCardPayment("1234-5678-9012-3456", "John Doe", "123", "12/24");
+        PaymentStrategy paypalPayment = new PayPalPayment("john.doe@example.com");
+
+        // Using PaymentContext to pay with Credit Card
+        PaymentContext paymentContext = new PaymentContext(creditCardPayment);
+        paymentContext.executePayment(250.00);
+
+        // Switching to PayPal payment method
+        paymentContext.setPaymentStrategy(paypalPayment);
+        paymentContext.executePayment(150.00);
+    }
+}
