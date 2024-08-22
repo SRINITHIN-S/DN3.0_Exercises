@@ -1,0 +1,9 @@
+GET /api/books/1
+
+GET /api/books
+
+GET /api/books?title=Spring
+
+GET /api/books?author=Craig Walls
+
+GET /api/books?title=Spring&author=Craig Walls

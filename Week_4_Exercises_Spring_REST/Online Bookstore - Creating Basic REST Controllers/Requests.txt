@@ -1,0 +1,25 @@
+GET /api/books
+
+GET /api/books/{id}
+
+POST /api/books
+Content-Type: application/json
+
+{
+    "title": "Spring in Action",
+    "author": "Craig Walls",
+    "price": 39.99,
+    "isbn": "9781617294945"
+}
+
+PUT /api/books/{id}
+Content-Type: application/json
+
+{
+    "title": "Spring in Action, 5th Edition",
+    "author": "Craig Walls",
+    "price": 44.99,
+    "isbn": "9781617294945"
+}
+
+DELETE /api/books/{id}
