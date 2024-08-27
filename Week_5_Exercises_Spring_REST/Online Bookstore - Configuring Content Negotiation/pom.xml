@@ -1,0 +1,29 @@
+<dependencies>
+    <!-- Spring Boot Starter Web for building web applications -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Spring HATEOAS for adding hypermedia links -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
+
+    <!-- Jackson XML for XML serialization/deserialization -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-xml</artifactId>
+    </dependency>
+
+    <!-- Optional: JAXB API for XML binding (if needed) -->
+    <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+    </dependency>
+
+    <!-- Other dependencies like Lombok, Validation, etc. -->
+    <!-- ... -->
+</dependencies>

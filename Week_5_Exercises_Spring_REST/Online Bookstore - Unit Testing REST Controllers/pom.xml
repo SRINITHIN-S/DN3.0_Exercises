@@ -1,0 +1,10 @@
+<dependencies>
+    <!-- Other dependencies -->
+
+    <!-- Spring Boot Starter Test for testing with JUnit, Mockito, etc. -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>

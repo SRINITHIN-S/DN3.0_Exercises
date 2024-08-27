@@ -1,0 +1,10 @@
+<dependencies>
+    <!-- Other dependencies -->
+
+    <!-- Springdoc OpenAPI for Swagger UI -->
+    <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-ui</artifactId>
+        <version>1.7.0</version> <!-- Use the latest version available -->
+    </dependency>
+</dependencies>
